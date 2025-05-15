@@ -1,27 +1,28 @@
 import streamlit as st
 
-# Deixar fundo branco (streamlit já tem fundo branco padrão)
+# Custom CSS para estilizar a página
 st.markdown(
     """
-     <style>
+    <style>
+        /* Fundo branco da página */
         body {
             background-color: white;
         }
+        /* Centralizar e estilizar conteúdo principal */
         .main {
-            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 2rem;
             border-radius: 10px;
         }
+        /* Estilizar título */
         h1 {
             color: #333333;
             font-family: 'Segoe UI', sans-serif;
             text-align: center;
         }
-        .stButton {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
+        /* Centralizar botão */
         .stButton > button {
             background-color: #4CAF50;
             color: white;
@@ -30,6 +31,9 @@ st.markdown(
             border-radius: 8px;
             border: none;
             cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .stButton > button:hover {
             background-color: #45a049;
@@ -41,5 +45,7 @@ st.markdown(
 
 st.title("Clique no botão abaixo")
 
+# Botão centralizado que mostra a imagem quando clicado
 if st.button("Mostrar Stitch"):
-    st.image("Imagens/Stitch-2.png", use_container_width=True)
+    # Usar barra normal no caminho da imagem para funcionar no Streamlit Cloud
+    st.image("Imagens/Stitch-2.png", use_container_width=True, caption="💙 Stitch apareceu!")
