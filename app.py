@@ -42,4 +42,4 @@ st.markdown(
 st.title("Clique no botão abaixo")
 
 if st.button("Mostrar Stitch"):
-    st.image(r"C:\Users\lucas\OneDrive\Área de Trabalho\Sisters\Imagens\Stitch-2.png", use_container_width=True)
+    st.image("Imagens\Stitch-2.png", use_container_width=True)
